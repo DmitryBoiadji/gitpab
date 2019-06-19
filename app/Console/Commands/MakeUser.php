@@ -48,7 +48,7 @@ class MakeUser extends Command
         /** @var RoleRepositoryEloquent $roleRepo */
         $roleRepo = app(AppServiceProvider::ROLE_REPOSITORY);
         $roles = $roleRepo->all()->pluck('name')->toArray();
-        $roles = $this->anticipate('Role', $roles);
+        //$roles = $this->anticipate('Role', $roles);
 
         /** @var EloquentUserService $userService */
         $userService = app(AppServiceProvider::ELOQUENT_USER_SERVICE);
