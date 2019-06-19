@@ -41,9 +41,9 @@ class MakeUser extends Command
      */
     public function handle()
     {
-        $name = $this->ask('User name');
-        $email = $this->ask('User email');
-        $password = Hash::make($this->secret('User password'));
+        $name = 'Admin';
+        $email = 'admin@admin.com'
+        $password = Hash::make($this->secret('admin'));
 
         /** @var RoleRepositoryEloquent $roleRepo */
         $roleRepo = app(AppServiceProvider::ROLE_REPOSITORY);
