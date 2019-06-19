@@ -147,6 +147,7 @@ npm install
 npm run prod
 ```
 
+
 Run new migrations:
 ```bash
 php artisan migrate
@@ -159,6 +160,21 @@ php artisan db:seed
 sudo php artisan cache:clear
 ```
 
-## I wish you successful projects!
 
-![](/doc/zubr-gitpab-small.jpeg)
+Create default user
+```bash
+php artisan user:make
+```
+
+Open url http://127.0.0.1:8010  
+And enter  
+login `admin@admin.com`  
+password `admin`
+
+
+
+
+
+
+
+
