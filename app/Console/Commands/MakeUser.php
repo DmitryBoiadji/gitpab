@@ -42,7 +42,7 @@ class MakeUser extends Command
     public function handle()
     {
         $name = 'Admin';
-        $email = 'admin@admin.com'
+        $email = 'admin@admin.com';
         $password = Hash::make($this->secret('admin'));
 
         /** @var RoleRepositoryEloquent $roleRepo */
