@@ -17,11 +17,7 @@ class MakeUser extends Command
      */
     protected $signature = 'make:user';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
+
     protected $description = 'Create new user';
 
     /**
@@ -43,7 +39,7 @@ class MakeUser extends Command
     {
         $name = 'Admin';
         $email = 'admin@admin.com';
-        $password = Hash::make($this->secret('admin'));
+        $password = Hash::make('admin');
 
         /** @var RoleRepositoryEloquent $roleRepo */
         $roleRepo = app(AppServiceProvider::ROLE_REPOSITORY);
