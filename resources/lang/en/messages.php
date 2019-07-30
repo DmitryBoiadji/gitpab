@@ -101,7 +101,8 @@ return [
     'View spent time' => 'View spent time',
     'View user' => 'View user',
     'Web url' => 'Web url',
-
     'of' => 'of',
+    'Human Hours' => 'Human Hours',
+
 
 ];

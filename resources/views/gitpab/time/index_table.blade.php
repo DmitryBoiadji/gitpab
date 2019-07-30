@@ -37,6 +37,17 @@ unset($orderLinkParams['submit']);
         ])
 
         @include('partial.table.thcell', [
+          'column' => 'spent.hours',
+          'label' => __('messages.Human Hours'),
+          'order' => $order,
+          'orderDirection' => $orderDirection,
+          'orderLinkRoute' => $indexRoute,
+          'orderLinkParams' => $orderLinkParams,
+      ])
+
+
+
+        @include('partial.table.thcell', [
             'column' => $columnTitleName,
             'label' => $columnTitleLabel,
         ])
@@ -74,6 +85,7 @@ unset($orderLinkParams['submit']);
                 {{ \App\Helper\Date::formatDateTime($item->note->gitlab_created_at, 'd.m.Y H:i') }}
             </td>
             <td class="col-md-1">{{ $item->hours }}</td>
+            <td class="col-md-1">{{ $item->human_hours }}</td>
             <td class="col-md-4">
                 <a href="{{ route('issue.show', [$item->note->issue]) }}">
                     #{{ $item->note->issue->iid }}
